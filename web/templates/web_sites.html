@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box {
+            
+            column-gap: 100px;
+            margin-left: 80px;
+            
+        }
+        h1 {
+            text-align: center;
+        }
+        body {background-color:tomato;}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL IN ONE</title>
+    <link rel="icon" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/web-1683023-1441052.png" type="image/icon type">
+</head>
+
+        
+
+
+<body>
+    <h1>ALL SITES AND LINKS</h1>
+    <div class='box'>
+        {% for a in WB %}
+            <h2><img src = "{{a.Image.url}}" alt="" width= "300" height="350">
+            <h2>{{a.Name_Of_Site}}</h2>
+            <h2><a href="{{a.Site_Link}}">www.xxxx.com </a></h2>
+            <h3>{{a.Description}}</h3></h2>
+            <h3>==========================================================================================================================</h3>
+            
+        {% endfor %}
+    </div>
+</body>
+</html>
